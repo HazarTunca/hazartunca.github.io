@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     QoLEditor – Betre Dev
