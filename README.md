@@ -1,9 +1,9 @@
-# Hazar Tunca
+# Betre Games
 
-Welcome to my personal GitHub Pages site where I showcase my work
+Website for Betre Games, served at [betregames.com](https://betregames.com) via GitHub Pages.
 
----
+- `/` Turkish home page
+- `/en/` English home page
+- `/privacy-policy/` Privacy policy (English)
 
-Visit the site here: [https://hazartunca.github.io](https://hazartunca.github.io)
-
----
+`CNAME` holds the custom domain. Don't delete it.
