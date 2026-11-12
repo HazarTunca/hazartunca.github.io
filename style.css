@@ -337,48 +337,73 @@ h2 {
 
 /* Games */
 
-.soon {
+.games {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.game {
     position: relative;
-    padding: clamp(1.75rem, 5vw, 2.75rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
     border: 1px solid var(--line-strong);
     border-radius: var(--radius);
     overflow: hidden;
     background: linear-gradient(135deg, rgba(255, 111, 0, 0.14), var(--bg-raised) 60%);
 }
 
-.soon-mark {
-    position: absolute;
-    right: -28px;
-    bottom: -44px;
-    width: 180px;
-    height: auto;
-    opacity: 0.16;
-    transform: rotate(-12deg);
-    pointer-events: none;
-}
-
-@media (max-width: 599px) {
-    .soon-mark {
-        width: 120px;
-        right: -24px;
-        bottom: -36px;
-        opacity: 0.12;
+@media (min-width: 600px) {
+    .game {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        gap: 2rem;
     }
 }
 
-.soon-title {
-    position: relative;
-    margin: 0 0 0.5rem;
-    font: 700 clamp(2rem, 6vw, 3rem)/1.05 var(--display);
-    letter-spacing: -0.03em;
+.game-icon {
+    width: clamp(112px, 26vw, 150px);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 22.5%;
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 18px 40px -12px rgba(0, 0, 0, 0.7),
+        0 0 60px -14px rgba(255, 111, 0, 0.5);
+}
+
+.game-tag {
+    display: inline-block;
+    margin: 0 0 0.6rem;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid rgba(255, 111, 0, 0.4);
+    border-radius: 999px;
+    font: 600 0.75rem/1 var(--body);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--orange);
 }
 
-.soon-note {
-    position: relative;
-    max-width: 44ch;
-    margin: 0;
+.game h3 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.game-desc {
+    max-width: 52ch;
+    margin: 0 0 1.5rem;
     color: var(--muted);
+}
+
+.store-btn {
+    padding: 0.85rem 1.35rem;
 }
 
 /* About */
